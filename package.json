@@ -1,0 +1,30 @@
+{
+  "name": "api-shoppe",
+  "version": "0.0.1",
+  "description": "FullStory Backend/API Server demo",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8.15.0",
+    "npm": ">=6.4.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "start:dev": "concurrently \"npm run build:watch\" \"nodemon dist/index.js\""
+  },
+  "keywords": [
+    "FullStory"
+  ],
+  "author": "van@fullstory.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.7.5"
+  }
+}
