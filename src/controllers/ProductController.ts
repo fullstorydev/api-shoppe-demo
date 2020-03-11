@@ -11,8 +11,8 @@ export function getProduct(req: Request, res: Response) {
 
   console.log(`Getting product with id ${id}`);
 
-  const controller = ProductCatalog.getInstance();
-  const product = controller.getProduct(+id);
+  const catalog = ProductCatalog.getInstance();
+  const product = catalog.getProduct(+id);
 
   // send the product or Not Found if the ID wasn't valid
   product ? res.json(product) : res.status(404).send();
@@ -29,8 +29,8 @@ export function getProducts(req: Request, res: Response) {
 
   console.log(`Getting product with query ${q}`);
 
-  const controller = ProductCatalog.getInstance();
-  const products = controller.getProducts(q);
+  const catalog = ProductCatalog.getInstance();
+  const products = catalog.getProducts(q);
 
   res.json(products);
 }
