@@ -1,5 +1,6 @@
 import express from 'express';
 import { PingController } from './controllers';
+import { getProduct, getProducts } from './controllers/ProductController';
 
 // read config
 const {
@@ -14,6 +15,8 @@ const ping = new PingController();
 
 // add controllers to routes
 app.get('/api/ping', ping.getPing);
+app.get('/api/products', getProducts);
+app.get('/api/products/:id', getProduct);
 
 // start the server
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
