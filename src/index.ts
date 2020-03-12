@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import { PingController } from './controllers';
 import { getProduct, getProducts } from './controllers/ProductController';
@@ -9,6 +10,9 @@ const {
 
 // create and configure Express
 const app = express();
+
+// add CORS to allow local testing
+app.use(cors());
 
 // create controllers
 const ping = new PingController();
