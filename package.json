@@ -1,6 +1,6 @@
 {
-  "name": "api-shoppe",
-  "version": "0.0.1",
+  "name": "api-shoppe-demo",
+  "version": "1.0.0",
   "description": "FullStory Backend/API Server demo",
   "main": "dist/index.js",
   "engines": {
